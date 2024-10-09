@@ -5,8 +5,8 @@
 }
 
 :root {
-    --main-font: "Play";
-    --title-font: "Press Start 2P";
+  --main-font: "Play";
+  --title-font: "Press Start 2P";
 }
 
 main {
@@ -16,7 +16,7 @@ main {
 }
 
 h1 {
-    font-family: var(--title-font);
+  font-family: var(--title-font);
 }
 
 .wilder-card {
@@ -25,7 +25,7 @@ h1 {
   align-items: center;
   gap: 12px;
   padding: 24px;
-  background-color: white;
+  color: white;
 }
 
 .wilder-card-header {
@@ -62,7 +62,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 4px #759BEE;
+  border: solid 4px #759bee;
   border-radius: 16px;
   background-color: #2958bb;
 }
