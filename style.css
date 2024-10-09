@@ -18,3 +18,42 @@ main {
 h1 {
     font-family: var(--title-font);
 }
+
+.wilder-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 24px;
+  background-color: blue;
+}
+
+.wilder-card-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: red;
+  padding: 24px 32px;
+  border-radius: 16px;
+}
+
+.wilder-card-header h3 {
+  margin-top: -10px;
+}
+
+.wilder-card-header img {
+  width: 32px;
+  height: 32px;
+}
+
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.age h3 {
+  font-size: 32px;
+}
