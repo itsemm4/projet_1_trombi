@@ -23,16 +23,16 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
+  gap: 12px;
   padding: 24px;
-  background-color: blue;
+  background-color: white;
 }
 
 .wilder-card-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: red;
+  background-color: #2958bb;
   padding: 24px 32px;
   border-radius: 16px;
 }
@@ -56,4 +56,58 @@ h1 {
 
 .age h3 {
   font-size: 32px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid 4px #759BEE;
+  border-radius: 16px;
+  background-color: #2958bb;
+}
+
+.img-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-card img {
+  width: 200px;
+  height: auto;
+}
+
+.details-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 32px;
+  background-color: #254fa8;
+  border-radius: 12px;
+}
+
+.stats-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 24px;
+}
+
+.level {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+progress {
+  width: 60px;
 }
