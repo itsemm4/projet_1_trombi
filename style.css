@@ -4,7 +4,17 @@
   padding: 0;
 }
 
+:root {
+    --main-font: "Play";
+    --title-font: "Press Start 2P";
+}
+
 main {
   background-color: black;
   color: #ffe605;
+  font-family: var(--main-font);
+}
+
+h1 {
+    font-family: var(--title-font);
 }
