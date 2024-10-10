@@ -19,6 +19,7 @@ main {
 
 h1 {
   font-family: var(--title-font);
+  margin-bottom: 24px;
 }
 
 .wilder-card {
@@ -148,3 +149,18 @@ h1 {
 .js-content {
   background-color: #d9c004;
 }
+ .grid img {
+  width: 100px;
+  border-radius: 5px;
+  border: solid #C942DA 3px;
+ }
+
+ .grid img:hover {
+  border: solid #d9c004 3px;
+ }
+
+ .wilder-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
