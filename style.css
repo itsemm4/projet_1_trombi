@@ -7,6 +7,8 @@
 :root {
   --main-font: "Play";
   --title-font: "Press Start 2P";
+  --main-color-card: #214594;
+  --secondary-color-card: #2958bb;
 }
 
 main {
@@ -37,7 +39,7 @@ h1 {
 }
 
 .wild-card-header-css {
-  background-color: #2958bb;
+  background-color: var(--main-color-card);
 }
 
 .wilder-card-header h3 {
@@ -65,9 +67,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 4px #214594;
+  border: solid 4px var(--main-color-card);
   border-radius: 16px;
-  background-color: #2958bb;
+  background-color: var(--secondary-color-card);
 }
 
 .img-card {
@@ -94,7 +96,7 @@ h1 {
   align-items: center;
   padding: 16px;
   gap: 32px;
-  background-color: #214594;
+  background-color: var(--main-color-card);
   border-radius: 12px;
 }
 
@@ -140,7 +142,7 @@ h1 {
 }
 
 .css-content {
-  background-color: #2958bb;
+  background-color: var(--secondary-color-card);
 }
 
 .js-content {
