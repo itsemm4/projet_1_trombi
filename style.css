@@ -25,6 +25,11 @@ h1 {
   margin-block: 3vw;
 }
 
+#closing-cross {
+  width: 30px;
+  cursor: pointer;
+}
+
 .wilder-card {
   display: none;
   flex-direction: column;
