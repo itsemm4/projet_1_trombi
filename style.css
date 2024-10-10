@@ -7,6 +7,8 @@
 :root {
   --main-font: "Play";
   --title-font: "Press Start 2P";
+  --main-color-card: #214594;
+  --secondary-color-card: #2958bb;
 }
 
 main {
@@ -32,9 +34,12 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #2958bb;
   padding: 24px 32px;
   border-radius: 16px;
+}
+
+.wild-card-header-css {
+  background-color: var(--main-color-card);
 }
 
 .wilder-card-header h3 {
@@ -62,9 +67,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: solid 4px #759bee;
+  border: solid 4px var(--main-color-card);
   border-radius: 16px;
-  background-color: #2958bb;
+  background-color: var(--secondary-color-card);
 }
 
 .img-card {
@@ -76,8 +81,14 @@ h1 {
 .img-card img {
   width: 200px;
   height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
+.img-card p {
+  font-size: 2rem;
+  margin-block: 10px;
+}
 
 .details-card {
   display: flex;
@@ -85,7 +96,7 @@ h1 {
   align-items: center;
   padding: 16px;
   gap: 32px;
-  background-color: #254fa8;
+  background-color: var(--main-color-card);
   border-radius: 12px;
 }
 
@@ -109,6 +120,31 @@ h1 {
   gap: 8px;
 }
 
-progress {
+.progress-bar {
   width: 60px;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2px;
+  border-radius: 50px;
+}
+
+.progress-bar-content {
+  width: 70%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.html-content {
+  background-color: #ff7300;
+}
+
+.css-content {
+  background-color: var(--secondary-color-card);
+}
+
+.js-content {
+  background-color: #d9c004;
 }
