@@ -11,18 +11,30 @@
   --secondary-color-card: #2958bb;
 }
 
-main {
+html {
   background-color: black;
+}
+
+main {
   color: #ffe605;
   font-family: var(--main-font);
 }
 
 h1 {
   font-family: var(--title-font);
-  margin-bottom: 24px;
+  margin-block: 3vw;
 }
 
 .wilder-card {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  color: white;
+}
+
+.wilder-card-active {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,6 +47,7 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 24px 32px;
   border-radius: 16px;
 }
@@ -43,13 +56,9 @@ h1 {
   background-color: var(--main-color-card);
 }
 
-.wilder-card-header h3 {
-  margin-top: -11px;
-}
-
 .wilder-card-header img {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
 }
 
 .icons {
@@ -61,7 +70,7 @@ h1 {
 }
 
 .age h3 {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .card {
@@ -122,7 +131,7 @@ h1 {
 }
 
 .progress-bar {
-  width: 60px;
+  width: 10vw;
   height: 10px;
   background-color: rgb(255, 255, 255);
   display: flex;
@@ -149,18 +158,27 @@ h1 {
 .js-content {
   background-color: #d9c004;
 }
- .grid img {
-  width: 100px;
+
+.grid {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.grid img {
+  width: 25vw;
   border-radius: 5px;
-  border: solid #C942DA 3px;
- }
+  border: solid #c942da 3px;
+}
 
- .grid img:hover {
+.grid img:hover {
   border: solid #d9c004 3px;
- }
+}
 
- .wilder-selection {
+.wilder-selection {
   display: flex;
   flex-direction: column;
   align-items: center;
- }
+}
