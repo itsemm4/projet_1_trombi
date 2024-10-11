@@ -36,6 +36,7 @@ h1 {
 }
 
 .wilder-card {
+  z-index: 999;
   width: 100%;
   display: none;
   flex-direction: column;
@@ -51,6 +52,7 @@ h1 {
 }
 
 .wilder-card-active {
+  z-index: 999;
   width: 100%;
   position: absolute;
   display: flex;
@@ -181,6 +183,17 @@ h1 {
 }
 
 .blur-background {
+  display: none;
+  position: absolute;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.blur-background-active {
+  display: block;
   position: absolute;
   z-index: 99;
   width: 100vw;

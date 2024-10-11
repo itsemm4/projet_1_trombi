@@ -1,6 +1,6 @@
 const cardImage = document.getElementById("card-image");
 const pDescription = document.getElementById("p-description");
-const citation = document.querySelector('blockquote')
+const citation = document.querySelector("blockquote");
 const card = document.querySelector(".wilder-card");
 const grid = document.querySelector(".grid");
 const close = document.querySelector("#closing-cross");
@@ -8,6 +8,7 @@ const wilderName = document.querySelector(".wilder_name");
 const wilderAge = document.querySelector(".wilder_age");
 const iconStack = document.querySelector(".icon-stack");
 const iconGenre = document.querySelector(".icon-genre");
+const blurBackground = document.querySelector(".blur-background");
 
 const person = [
   {
@@ -233,6 +234,8 @@ person.forEach((element) => {
   image.src = `${element.avatar}`;
 
   image.addEventListener("click", () => {
+    blurBackground.classList.add("blur-background-active");
+    blurBackground.classList.remove("blur-background");
     card.classList.add("wilder-card-active");
     card.classList.remove("wilder-card");
     cardImage.src = element.img;
@@ -248,4 +251,6 @@ person.forEach((element) => {
 close.addEventListener("click", function () {
   card.classList.remove("wilder-card-active");
   card.classList.add("wilder-card");
+  blurBackground.classList.add("blur-background");
+  blurBackground.classList.remove("blur-background-active");
 });
