@@ -1,8 +1,13 @@
 const cardImage = document.getElementById("card-image");
 const pDescription = document.getElementById("p-description");
+const citation = document.querySelector('blockquote')
 const card = document.querySelector(".wilder-card");
 const grid = document.querySelector(".grid");
 const close = document.querySelector("#closing-cross");
+const wilderName = document.querySelector(".wilder_name");
+const wilderAge = document.querySelector(".wilder_age");
+const iconStack = document.querySelector(".icon-stack");
+const iconGenre = document.querySelector(".icon-genre");
 
 const person = [
   {
@@ -11,7 +16,8 @@ const person = [
     age: 38,
     img: "./assets/images/Abdou.jpg",
     avatar: "./assets/avatar/abdou.jpg",
-    stack: "HTML",
+    stack: "./assets/icons/html_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Abdou, jeune vieux de 38ans, soif de connaissances dans des domaines divers et variés. Eternel écrivain en herbe, j'écris souvent des éditos et analyses politiques à mes heures perdues. Passionné de la Tech, je me forge à explorer les métiers de la Tech dans une reconversion en cours.",
     quote: "L'effort fait les forts",
@@ -25,7 +31,8 @@ const person = [
     age: 20,
     img: "./assets/images/Justine.jpg",
     avatar: "./assets/avatar/cedric.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Passionné par l’informatique et la technologie, j’aime explorer des sujets techniques tout en gardant une touche d’humour dans ma vie quotidienne. Toujours à la recherche de nouveaux défis et d’apprentissages, j’aime varier les plaisirs entre logique et créativité.",
     quote: "Je vais vous prendre une glace blanche avec les SmicSmac.",
@@ -39,7 +46,8 @@ const person = [
     age: 33,
     img: "./assets/images/Charlotte.jpg",
     avatar: "./assets/avatar/charlotte.jpg",
-    stack: "CSS",
+    stack: "./assets/icons/css_white.png",
+    gender: "./assets/icons/whiteFemale.png",
     description:
       "Toujours de bonne humeur, je m'adapte facilement dans un nouvel environnement.",
     quote: "Better late than ugly.",
@@ -53,7 +61,8 @@ const person = [
     age: 28,
     img: "./assets/images/Charlotte.jpg",
     avatar: "./assets/avatar/emma.jpg",
-    stack: "HTML",
+    stack: "./assets/icons/html_white.png",
+    gender: "./assets/icons/whiteFemale.png",
     description:
       "J'aime tout ce qui est à trait à l'Art (Photographie, Peinture, Digital etc.) et je ne peux pas me passer d'écouter de la musique.",
     quote:
@@ -68,7 +77,8 @@ const person = [
     age: 39,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/flo.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Acheteur de formation, développeur web en devenir, toujours curieux et désireux d'apprendre, adepte de bons mots et de calembours, de bonne humeur et constamment à l'écoute des autres. Sinon j'ai aussi des défauts.",
     quote:
@@ -83,7 +93,8 @@ const person = [
     age: 28,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/julien.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Try harder, persévérant qui n'aime pas abandonner. Signe distinctif : oublie souvent de verrouiller son ordinateur.",
     quote:
@@ -98,7 +109,8 @@ const person = [
     age: 41,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/justine.jpg",
-    stack: "CSS",
+    stack: "./assets/icons/css_white.png",
+    gender: "./assets/icons/whiteFemale.png",
     description: "Maman touche à tout. Qui aime apprendre de nouvelles choses.",
     quote:
       "La vie, c'est comme une boîte de chocolats, on ne sait jamais sur quoi on va tomber.",
@@ -112,7 +124,8 @@ const person = [
     age: 23,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/mike.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Curieux et créatif, je trouve toujours des solutions avec une touche d’humour et de spontanéité. Ouvert et sociable, j'aime relever des défis tout en apportant une bonne dose de bonne humeur.",
     quote:
@@ -127,7 +140,8 @@ const person = [
     age: 24,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/radwan.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Je suis quelqu'un un peu tête en l'air du genre solitaire mais bonne ambiance , ma grande passion c'est le foot et j'adore vanner!",
     quote:
@@ -142,7 +156,8 @@ const person = [
     age: 26,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/remi.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description: "Je suis quelqu'un et c'est deja bien !",
     quote: "Kebab",
     levelHtml: 10,
@@ -155,7 +170,8 @@ const person = [
     age: 34,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/sylvia.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteFemale.png",
     description:
       "Curieuse et dynamique, j’adore apprendre et découvrir de nouvelles choses que ce soit professionnellement (notamment à travers la veille technologique) ou dans la sphère privée (la guitare, les langues, les voyages, la cuisine).  Aimant les responsabilités, je fais partie d’un groupe d’échange en anglais que j’ai plaisir à animer en tant qu’hôte.",
     quote:
@@ -170,7 +186,8 @@ const person = [
     age: 56,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/thierry.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Je suis quelqu'un de timide mais sérieux, avec une détermination inébranlable. J'avance avec persévérance vers les objectifs que je me suis fixé.",
     quote: "Je suis ton père.",
@@ -184,7 +201,8 @@ const person = [
     age: 23,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/tom.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description: "A venir",
     quote: "A venir",
     levelHtml: 10,
@@ -197,7 +215,8 @@ const person = [
     age: 32,
     img: "./assets/images/Flo.jpg",
     avatar: "./assets/avatar/arthur.jpg",
-    stack: "JS",
+    stack: "./assets/icons/js_white.png",
+    gender: "./assets/icons/whiteMale.png",
     description:
       "Papa, musicien et formateur, il y a peu de choses que j'aime plus que de transmettre mon savoir sur des sujets variés. Depuis 2022, c'est le développement web à la Wild Code School ! En février 2025, j'aurai la fierté d'avoir contribué à la reconversion professionnelle de 58 développeurs, car c'est bien ce que j'aime par dessus tout dans mon métier : les rencontres et le contact humain.",
     quote:
@@ -218,6 +237,11 @@ person.forEach((element) => {
     card.classList.remove("wilder-card");
     cardImage.src = element.img;
     pDescription.textContent = element.description;
+    citation.textContent = element.quote;
+    wilderName.textContent = element.name;
+    wilderAge.textContent = element.age;
+    iconStack.src = element.stack;
+    iconGenre.src = element.gender;
   });
 });
 
