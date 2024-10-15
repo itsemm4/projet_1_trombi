@@ -8,6 +8,12 @@ const wilderName = document.querySelector(".wilder_name");
 const wilderAge = document.querySelector(".wilder_age");
 const iconStack = document.querySelector(".icon-stack");
 const iconGenre = document.querySelector(".icon-genre");
+const htmlBar = document.querySelector(".html-content");
+const cssBar = document.querySelector(".css-content");
+const jsBar = document.querySelector(".js-content");
+const cardHeader = document.querySelector(".wilder-card-header");
+const cardDetails = document.querySelector(".details-card");
+const cardNoHeader = document.querySelector(".cards");
 const blurBackground = document.querySelector(".blur-background");
 
 const person = [
@@ -22,9 +28,9 @@ const person = [
     description:
       "Abdou, jeune vieux de 38ans, soif de connaissances dans des domaines divers et variés. Eternel écrivain en herbe, j'écris souvent des éditos et analyses politiques à mes heures perdues. Passionné de la Tech, je me forge à explorer les métiers de la Tech dans une reconversion en cours.",
     quote: "L'effort fait les forts",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 2,
@@ -37,9 +43,9 @@ const person = [
     description:
       "Passionné par l’informatique et la technologie, j’aime explorer des sujets techniques tout en gardant une touche d’humour dans ma vie quotidienne. Toujours à la recherche de nouveaux défis et d’apprentissages, j’aime varier les plaisirs entre logique et créativité.",
     quote: "Je vais vous prendre une glace blanche avec les SmicSmac.",
-    levelHtml: 100,
-    levelCss: 100,
-    levelJs: 100,
+    levelHtml: "100%",
+    levelCss: "100%",
+    levelJs: "100%",
   },
   {
     id: 3,
@@ -52,9 +58,9 @@ const person = [
     description:
       "Toujours de bonne humeur, je m'adapte facilement dans un nouvel environnement.",
     quote: "Better late than ugly.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 4,
@@ -68,9 +74,9 @@ const person = [
       "J'aime tout ce qui est à trait à l'Art (Photographie, Peinture, Digital etc.) et je ne peux pas me passer d'écouter de la musique.",
     quote:
       "Le bonheur, est-ce de se satisfaire du moment présent, quel qu'il soit ? Cela semble tout à la fois simple et difficile. - Vagabond",
-    levelHtml: 100,
-    levelCss: 100,
-    levelJs: 100,
+    levelHtml: "100%",
+    levelCss: "100%",
+    levelJs: "100%",
   },
   {
     id: 5,
@@ -84,9 +90,9 @@ const person = [
       "Acheteur de formation, développeur web en devenir, toujours curieux et désireux d'apprendre, adepte de bons mots et de calembours, de bonne humeur et constamment à l'écoute des autres. Sinon j'ai aussi des défauts.",
     quote:
       "Ris, tout le monde rira avec toi, pleure et tu seras seul à pleurer.",
-    levelHtml: 100,
-    levelCss: 100,
-    levelJs: 100,
+    levelHtml: "100%",
+    levelCss: "100%",
+    levelJs: "100%",
   },
   {
     id: 6,
@@ -100,9 +106,9 @@ const person = [
       "Try harder, persévérant qui n'aime pas abandonner. Signe distinctif : oublie souvent de verrouiller son ordinateur.",
     quote:
       "Pour parler ? Au diable les misérables têtes d'œuf qui ont inventé le pourparler.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 7,
@@ -115,9 +121,9 @@ const person = [
     description: "Maman touche à tout. Qui aime apprendre de nouvelles choses.",
     quote:
       "La vie, c'est comme une boîte de chocolats, on ne sait jamais sur quoi on va tomber.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 8,
@@ -131,9 +137,9 @@ const person = [
       "Curieux et créatif, je trouve toujours des solutions avec une touche d’humour et de spontanéité. Ouvert et sociable, j'aime relever des défis tout en apportant une bonne dose de bonne humeur.",
     quote:
       "Toujours prêt à relever les défis… sauf ceux qui commencent avant 8h du matin.",
-    levelHtml: 100,
-    levelCss: 100,
-    levelJs: 100,
+    levelHtml: "100%",
+    levelCss: "100%",
+    levelJs: "100%",
   },
   {
     id: 9,
@@ -147,9 +153,9 @@ const person = [
       "Je suis quelqu'un un peu tête en l'air du genre solitaire mais bonne ambiance , ma grande passion c'est le foot et j'adore vanner!",
     quote:
       "Ce ne sont pas les gens qui changent , ce sont les masques qui tombent",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 10,
@@ -161,9 +167,9 @@ const person = [
     gender: "./assets/icons/whiteMale.png",
     description: "Je suis quelqu'un et c'est deja bien !",
     quote: "Kebab",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 11,
@@ -177,9 +183,9 @@ const person = [
       "Curieuse et dynamique, j’adore apprendre et découvrir de nouvelles choses que ce soit professionnellement (notamment à travers la veille technologique) ou dans la sphère privée (la guitare, les langues, les voyages, la cuisine).  Aimant les responsabilités, je fais partie d’un groupe d’échange en anglais que j’ai plaisir à animer en tant qu’hôte.",
     quote:
       "There's always gonna be another mountain, I'm always gonna wanna make it move, Ain't about how fast I get there, Ain't about what's waiting on the other sid, It's the climb - Miley Cirus",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 12,
@@ -192,9 +198,9 @@ const person = [
     description:
       "Je suis quelqu'un de timide mais sérieux, avec une détermination inébranlable. J'avance avec persévérance vers les objectifs que je me suis fixé.",
     quote: "Je suis ton père.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 13,
@@ -206,9 +212,9 @@ const person = [
     gender: "./assets/icons/whiteMale.png",
     description: "A venir",
     quote: "A venir",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: "10%",
+    levelCss: "10%",
+    levelJs: "10%",
   },
   {
     id: 14,
@@ -222,9 +228,9 @@ const person = [
       "Papa, musicien et formateur, il y a peu de choses que j'aime plus que de transmettre mon savoir sur des sujets variés. Depuis 2022, c'est le développement web à la Wild Code School ! En février 2025, j'aurai la fierté d'avoir contribué à la reconversion professionnelle de 58 développeurs, car c'est bien ce que j'aime par dessus tout dans mon métier : les rencontres et le contact humain.",
     quote:
       "The only thing I do know... is that we have to be kind. Please, be kind - especially when we don't know what's going on. - Everything, Everywhere, All at Once - The Daniels, 2022",
-    levelHtml: 100,
-    levelCss: 100,
-    levelJs: 100,
+    levelHtml: "100%",
+    levelCss: "100%",
+    levelJs: "100%",
   },
 ];
 
@@ -245,6 +251,9 @@ person.forEach((element) => {
     wilderAge.textContent = element.age;
     iconStack.src = element.stack;
     iconGenre.src = element.gender;
+    htmlBar.style.width = element.levelHtml;
+    cssBar.style.width = element.levelCss;
+    jsBar.style.width = element.levelJs;
   });
 });
 
