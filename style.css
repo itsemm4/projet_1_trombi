@@ -205,16 +205,16 @@ h1 {
 .grid {
   width: 90%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 5vw;
   margin-top: 3vw;
 }
 
 .grid img {
   width: 25vw;
   border-radius: 5px;
-  border: solid #c942da 3px;
+  border: solid #c942da 5px;
   cursor: pointer;
 }
 
