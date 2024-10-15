@@ -214,7 +214,7 @@ h1 {
 .grid img {
   width: 25vw;
   border-radius: 5px;
-  border: solid #c942da 5px;
+  border: solid #c942da 3px;
   cursor: pointer;
 }
 
