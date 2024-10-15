@@ -1,229 +1,228 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 :root {
-  --main-font: "Play";
-  --title-font: "Press Start 2P";
-  --main-color-card: #214594;
-  --secondary-color-card: #2958bb;
+	--main-font: "Play";
+	--title-font: "Press Start 2P";
+	--main-color-card: #214594;
+	--secondary-color-card: #2958bb;
 }
 
 html {
-  background-color: black;
+	background-color: black;
 }
 
 main {
-  color: #ffe605;
-  font-family: var(--main-font);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	color: #ffe605;
+	font-family: var(--main-font);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .wilder-selection p {
-  text-align: center;
-  margin-top: 12px;
-  font-size: 4vw;
+	text-align: center;
+	margin-top: 12px;
+	font-size: 4vw;
 }
 
 h1 {
-  font-family: var(--title-font);
-  margin-block: 5vw;
-  font-size: 5vw;
+	font-family: var(--title-font);
+	margin-block: 5vw;
+	font-size: 5vw;
 }
 
 .wilder-card {
-  z-index: 999;
-  width: 100%;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 24px;
-  color: white;
+	z-index: 999;
+	width: 100%;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	padding: 24px;
+	color: white;
 }
 
 #closing-cross {
-  width: 30px;
-  cursor: pointer;
+	width: 30px;
+	cursor: pointer;
 }
 
 .wilder-card-active {
-  z-index: 999;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 24px;
-  color: white;
+	z-index: 999;
+	width: 100%;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	padding: 24px;
+	color: white;
 }
 
 .wilder-card-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 32px;
-  border-radius: 16px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 24px 32px;
+	border-radius: 16px;
 }
 
 .wild-card-header-css {
-  background-color: var(--main-color-card);
+	background-color: var(--main-color-card);
 }
 
 .wilder-card-header img {
-  width: auto;
-  height: 25px;
+	width: auto;
+	height: 25px;
 }
 
 .icons {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
 }
 
 .age h3 {
-  font-size: 30px;
+	font-size: 30px;
 }
 
 .card {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: solid 4px var(--main-color-card);
-  border-radius: 16px;
-  background-color: var(--secondary-color-card);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: solid 4px var(--main-color-card);
+	border-radius: 16px;
+	background-color: var(--secondary-color-card);
 }
 
 .img-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .img-card img {
-  width: 200px;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 10px;
+	width: 200px;
+	height: auto;
+	border-radius: 10px;
+	margin-top: 10px;
 }
 
 .img-card p {
-  font-size: 2rem;
-  margin-block: 10px;
+	font-size: 2rem;
+	margin-block: 10px;
 }
 
 .details-card {
-  z-index: 999;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 16px;
-  gap: 32px;
-  background-color: var(--main-color-card);
-  border-radius: 12px;
+	z-index: 999;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 16px;
+	gap: 32px;
+	background-color: var(--main-color-card);
+	border-radius: 12px;
 }
 
 .stats-card {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 24px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 24px;
 }
 
 .level {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 8px;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
 }
 
 .progress-bar {
-  width: 10vw;
-  height: 10px;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 2px;
-  border-radius: 50px;
+	width: 10vw;
+	height: 10px;
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 2px;
+	border-radius: 50px;
 }
 
 .progress-bar-content {
-  width: 70%;
-  height: 100%;
-  border-radius: 50px;
+	height: 100%;
+	border-radius: 50px;
 }
 
 .html-content {
-  background-color: #ff7300;
+	background-color: #ff7300;
 }
 
 .css-content {
-  background-color: var(--secondary-color-card);
+	background-color: var(--secondary-color-card);
 }
 
 .js-content {
-  background-color: #d9c004;
+	background-color: #d9c004;
 }
 
 .blur-background {
-  display: none;
-  position: absolute;
-  z-index: 99;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+	display: none;
+	position: absolute;
+	z-index: 99;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(10px);
 }
 
 .blur-background-active {
-  display: block;
-  position: absolute;
-  z-index: 99;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+	display: block;
+	position: absolute;
+	z-index: 99;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.6);
+	backdrop-filter: blur(10px);
 }
 
 .grid {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 5vw;
-  margin-top: 3vw;
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 5vw;
+	margin-top: 3vw;
 }
 
 .grid img {
-  width: 25vw;
-  border-radius: 5px;
-  border: solid #c942da 3px;
-  cursor: pointer;
+	width: 25vw;
+	border-radius: 5px;
+	border: solid #c942da 3px;
+	cursor: pointer;
 }
 
 .grid img:hover {
-  border: solid #d9c004 3px;
+	border: solid #d9c004 3px;
 }
 
 .wilder-selection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
