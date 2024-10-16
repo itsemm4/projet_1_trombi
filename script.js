@@ -29,9 +29,9 @@ const person = [
     description:
       "Abdou, jeune vieux de 38ans, soif de connaissances dans des domaines divers et variés. Eternel écrivain en herbe, j'écris souvent des éditos et analyses politiques à mes heures perdues. Passionné de la Tech, je me forge à explorer les métiers de la Tech dans une reconversion en cours.",
     quote: "L'effort fait les forts",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 85,
+    levelCss: 60,
+    levelJs: 40,
     isPerfect: false,
   },
   {
@@ -61,9 +61,9 @@ const person = [
     description:
       "Toujours de bonne humeur, je m'adapte facilement dans un nouvel environnement.",
     quote: "Better late than ugly.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 60,
+    levelCss: 85,
+    levelJs: 40,
     isPerfect: false,
   },
   {
@@ -112,9 +112,9 @@ const person = [
       "Try harder, persévérant qui n'aime pas abandonner. Signe distinctif : oublie souvent de verrouiller son ordinateur.",
     quote:
       "Pour parler ? Au diable les misérables têtes d'œuf qui ont inventé le pourparler.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 40,
+    levelCss: 60,
+    levelJs: 85,
     isPerfect: false,
   },
   {
@@ -128,9 +128,9 @@ const person = [
     description: "Maman touche à tout. Qui aime apprendre de nouvelles choses.",
     quote:
       "La vie, c'est comme une boîte de chocolats, on ne sait jamais sur quoi on va tomber.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 60,
+    levelCss: 85,
+    levelJs: 40,
     isPerfect: false,
   },
   {
@@ -162,9 +162,9 @@ const person = [
       "Je suis quelqu'un un peu tête en l'air du genre solitaire mais bonne ambiance , ma grande passion c'est le foot et j'adore vanner!",
     quote:
       "Ce ne sont pas les gens qui changent , ce sont les masques qui tombent",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 60,
+    levelCss: 40,
+    levelJs: 85,
     isPerfect: false,
   },
   {
@@ -177,9 +177,9 @@ const person = [
     gender: "./assets/icons/whiteMale.png",
     description: "Je suis quelqu'un et c'est deja bien !",
     quote: "Kebab",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 60,
+    levelCss: 40,
+    levelJs: 85,
     isPerfect: false,
   },
   {
@@ -194,9 +194,9 @@ const person = [
       "Curieuse et dynamique, j’adore apprendre et découvrir de nouvelles choses que ce soit professionnellement (notamment à travers la veille technologique) ou dans la sphère privée (la guitare, les langues, les voyages, la cuisine).  Aimant les responsabilités, je fais partie d’un groupe d’échange en anglais que j’ai plaisir à animer en tant qu’hôte.",
     quote:
       "There's always gonna be another mountain, I'm always gonna wanna make it move, Ain't about how fast I get there, Ain't about what's waiting on the other sid, It's the climb - Miley Cirus",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 40,
+    levelCss: 60,
+    levelJs: 85,
     isPerfect: false,
   },
   {
@@ -210,9 +210,9 @@ const person = [
     description:
       "Je suis quelqu'un de timide mais sérieux, avec une détermination inébranlable. J'avance avec persévérance vers les objectifs que je me suis fixé.",
     quote: "Je suis ton père.",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 60,
+    levelCss: 40,
+    levelJs: 85,
     isPerfect: false,
   },
   {
@@ -225,9 +225,9 @@ const person = [
     gender: "./assets/icons/whiteMale.png",
     description: "A venir",
     quote: "A venir",
-    levelHtml: 10,
-    levelCss: 10,
-    levelJs: 10,
+    levelHtml: 60,
+    levelCss: 40,
+    levelJs: 85,
     isPerfect: false,
   },
   {
@@ -251,11 +251,11 @@ const person = [
 
 const checkStack = (element, color) => {
   if (element.stack === "Html") {
-      iconStack.src = `./assets/icons/html_${color}.png`;
-    } else if (element.stack === "Css") {
-      iconStack.src = `./assets/icons/css_${color}.png`;
-    } else {
-      iconStack.src = `./assets/icons/js_${color}.png`;
+    iconStack.src = `./assets/icons/html_${color}.png`;
+  } else if (element.stack === "Css") {
+    iconStack.src = `./assets/icons/css_${color}.png`;
+  } else {
+    iconStack.src = `./assets/icons/js_${color}.png`;
   }
 };
 
@@ -274,7 +274,7 @@ person.forEach((element) => {
     citation.textContent = element.quote;
     wilderName.textContent = element.name;
     wilderAge.textContent = element.age;
-    checkStack(element, 'white');
+    checkStack(element, "white");
     iconGenre.src = element.gender;
     htmlBar.style.width = `${element.levelHtml}%`;
     cssBar.style.width = `${element.levelCss}%`;
@@ -291,7 +291,8 @@ person.forEach((element) => {
     card.style.color = "#ffffff";
 
     if (element.isPerfect) {
-      const gradientBackground = "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      const gradientBackground =
+        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
       cardHeader.style.background = gradientBackground;
       cardDetails.style.background = gradientBackground;
       cardNoHeader.style.background = gradientBackground;
@@ -299,24 +300,24 @@ person.forEach((element) => {
       cardHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
       cardNoHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
       card.style.color = "#000000";
-      checkStack(element, 'black');
+      checkStack(element, "black");
     } else {
       card.style.boxShadow = "none";
       if (element.stack === "Html") {
         cardHeader.style.backgroundColor = "#C76048";
         cardDetails.style.backgroundColor = "#C76048";
         cardNoHeader.style.backgroundColor = "#E7916B";
-        cardNoHeader.style.borderColor = "#C76048";
+        cardNoHeader.style.border = "4px solid #C76048";
       } else if (element.stack === "Css") {
         cardHeader.style.backgroundColor = "#2958BB";
         cardDetails.style.backgroundColor = "#2958BB";
         cardNoHeader.style.backgroundColor = "#759BEE";
-        cardNoHeader.style.borderColor = "#2958BB";
+        cardNoHeader.style.border = "4px solid #2958BB";
       } else {
         cardHeader.style.backgroundColor = "#D5AB3C";
         cardDetails.style.backgroundColor = "#D5AB3C";
         cardNoHeader.style.backgroundColor = "#F7D137";
-        cardNoHeader.style.borderColor = "#D5AB3C";
+        cardNoHeader.style.border = "4px solid #D5AB3C";
       }
     }
   });
