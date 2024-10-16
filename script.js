@@ -21,7 +21,7 @@ const person = [
     id: 1,
     name: "Abdou Cissé",
     age: 38,
-    img: "./assets/images/Abdou.jpg",
+    img: "./assets/images/abdou.png",
     avatar: "./assets/avatar/abdou.jpg",
     stack: "Html",
     gender: "./assets/icons/whiteMale.png",
@@ -31,13 +31,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 2,
     name: "Cédric Righi",
     age: 20,
-    img: "./assets/images/Cedric.jpg",
+    img: "./assets/images/cedric.png",
     avatar: "./assets/avatar/cedric.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -47,13 +47,13 @@ const person = [
     levelHtml: 100,
     levelCss: 100,
     levelJs: 100,
-    isPerfect: true
+    isPerfect: true,
   },
   {
     id: 3,
     name: "Charlotte Albouy",
     age: 33,
-    img: "./assets/images/Charlotte.jpg",
+    img: "./assets/images/charlotte.png",
     avatar: "./assets/avatar/charlotte.jpg",
     stack: "Css",
     gender: "./assets/icons/whiteFemale.png",
@@ -63,13 +63,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 4,
     name: "Emma Robinet",
     age: 28,
-    img: "./assets/images/Emma.jpg",
+    img: "./assets/images/emma.png",
     avatar: "./assets/avatar/emma.jpg",
     stack: "Html",
     gender: "./assets/icons/whiteFemale.png",
@@ -80,13 +80,13 @@ const person = [
     levelHtml: 100,
     levelCss: 100,
     levelJs: 100,
-    isPerfect: true
+    isPerfect: true,
   },
   {
     id: 5,
     name: "Florentin Monteil",
     age: 39,
-    img: "./assets/images/Flo.jpg",
+    img: "./assets/images/flo.png",
     avatar: "./assets/avatar/flo.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -97,13 +97,13 @@ const person = [
     levelHtml: 100,
     levelCss: 100,
     levelJs: 100,
-    isPerfect: true
+    isPerfect: true,
   },
   {
     id: 6,
     name: "Julien Joecker",
     age: 28,
-    img: "./assets/images/Julien.jpg",
+    img: "./assets/images/julien.png",
     avatar: "./assets/avatar/julien.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -114,13 +114,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 7,
     name: "Justine Cousin",
     age: 41,
-    img: "./assets/images/Justine.jpg",
+    img: "./assets/images/justine.png",
     avatar: "./assets/avatar/justine.jpg",
     stack: "Css",
     gender: "./assets/icons/whiteFemale.png",
@@ -130,13 +130,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 8,
     name: "Mike Hatchi",
     age: 23,
-    img: "./assets/images/Mike.jpg",
+    img: "./assets/images/mike.png",
     avatar: "./assets/avatar/mike.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -147,13 +147,13 @@ const person = [
     levelHtml: 100,
     levelCss: 100,
     levelJs: 100,
-    isPerfect: true
+    isPerfect: true,
   },
   {
     id: 9,
     name: "Radwan Osman",
     age: 24,
-    img: "./assets/images/Radwan.jpg",
+    img: "./assets/images/radwan.png",
     avatar: "./assets/avatar/radwan.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -164,13 +164,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 10,
     name: "Rémi Zickenheiner",
     age: 26,
-    img: "./assets/images/Remi.jpg",
+    img: "./assets/images/remi.png",
     avatar: "./assets/avatar/remi.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -179,13 +179,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 11,
     name: "Sylvia Barraud",
     age: 34,
-    img: "./assets/images/Sylvia.jpg",
+    img: "./assets/images/sylvia.png",
     avatar: "./assets/avatar/sylvia.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteFemale.png",
@@ -196,13 +196,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 12,
     name: "Thierry Lenepveu",
     age: 56,
-    img: "./assets/images/Thierry.jpg",
+    img: "./assets/images/thierry.png",
     avatar: "./assets/avatar/thierry.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -212,13 +212,13 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 13,
     name: "Tom Schricke",
     age: 23,
-    img: "./assets/images/Tom.jpg",
+    img: "./assets/images/tom.png",
     avatar: "./assets/avatar/tom.jpg",
     stack: "Js",
     gender: "./assets/icons/whiteMale.png",
@@ -227,7 +227,7 @@ const person = [
     levelHtml: 10,
     levelCss: 10,
     levelJs: 10,
-    isPerfect: false
+    isPerfect: false,
   },
   {
     id: 14,
@@ -244,7 +244,7 @@ const person = [
     levelHtml: 100,
     levelCss: 100,
     levelJs: 100,
-    isPerfect: true
+    isPerfect: true,
   },
 ];
 
@@ -275,9 +275,12 @@ person.forEach((element) => {
     cssBar.style.width = `${element.levelCss}%`;
     jsBar.style.width = `${element.levelJs}%`;
     if (element.isPerfect) {
-      cardHeader.style.background = "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
-        cardDetails.style.background = "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
-        cardNoHeader.style.background = "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      cardHeader.style.background =
+        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      cardDetails.style.background =
+        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      cardNoHeader.style.background =
+        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
       cardNoHeader.style.border = "none";
       cardNoHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
     } else {
