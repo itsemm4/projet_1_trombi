@@ -2,6 +2,7 @@ const cardImage = document.getElementById("card-image");
 const pDescription = document.getElementById("p-description");
 const citation = document.querySelector("blockquote");
 const card = document.querySelector(".wilder-card");
+const cardActive = document.querySelector(".wilder-card-active");
 const grid = document.querySelector(".grid");
 const close = document.querySelector("#closing-cross");
 const wilderName = document.querySelector(".wilder_name");
@@ -40,7 +41,7 @@ const person = [
     img: "./assets/images/cedric.png",
     avatar: "./assets/avatar/cedric.jpg",
     stack: "Js",
-    gender: "./assets/icons/whiteMale.png",
+    gender: "./assets/icons/male.png",
     description:
       "Passionné par l’informatique et la technologie, j’aime explorer des sujets techniques tout en gardant une touche d’humour dans ma vie quotidienne. Toujours à la recherche de nouveaux défis et d’apprentissages, j’aime varier les plaisirs entre logique et créativité.",
     quote: "Je vais vous prendre une glace blanche avec les SmicSmac.",
@@ -72,7 +73,7 @@ const person = [
     img: "./assets/images/emma.png",
     avatar: "./assets/avatar/emma.jpg",
     stack: "Html",
-    gender: "./assets/icons/whiteFemale.png",
+    gender: "./assets/icons/female.png",
     description:
       "J'aime tout ce qui est à trait à l'Art (Photographie, Peinture, Digital etc.) et je ne peux pas me passer d'écouter de la musique.",
     quote:
@@ -89,7 +90,7 @@ const person = [
     img: "./assets/images/flo.png",
     avatar: "./assets/avatar/flo.jpg",
     stack: "Js",
-    gender: "./assets/icons/whiteMale.png",
+    gender: "./assets/icons/male.png",
     description:
       "Acheteur de formation, développeur web en devenir, toujours curieux et désireux d'apprendre, adepte de bons mots et de calembours, de bonne humeur et constamment à l'écoute des autres. Sinon j'ai aussi des défauts.",
     quote:
@@ -139,7 +140,7 @@ const person = [
     img: "./assets/images/mike.png",
     avatar: "./assets/avatar/mike.jpg",
     stack: "Js",
-    gender: "./assets/icons/whiteMale.png",
+    gender: "./assets/icons/male.png",
     description:
       "Curieux et créatif, je trouve toujours des solutions avec une touche d’humour et de spontanéité. Ouvert et sociable, j'aime relever des défis tout en apportant une bonne dose de bonne humeur.",
     quote:
@@ -236,7 +237,7 @@ const person = [
     img: "./assets/images/Arthur.jpg",
     avatar: "./assets/avatar/arthur.jpg",
     stack: "Js",
-    gender: "./assets/icons/whiteMale.png",
+    gender: "./assets/icons/male.png",
     description:
       "Papa, musicien et formateur, il y a peu de choses que j'aime plus que de transmettre mon savoir sur des sujets variés. Depuis 2022, c'est le développement web à la Wild Code School ! En février 2025, j'aurai la fierté d'avoir contribué à la reconversion professionnelle de 58 développeurs, car c'est bien ce que j'aime par dessus tout dans mon métier : les rencontres et le contact humain.",
     quote:
@@ -247,6 +248,16 @@ const person = [
     isPerfect: true,
   },
 ];
+
+const checkStack = (element, color) => {
+  if (element.stack === "Html") {
+      iconStack.src = `./assets/icons/html_${color}.png`;
+    } else if (element.stack === "Css") {
+      iconStack.src = `./assets/icons/css_${color}.png`;
+    } else {
+      iconStack.src = `./assets/icons/js_${color}.png`;
+  }
+};
 
 person.forEach((element) => {
   const image = document.createElement("img");
@@ -263,27 +274,34 @@ person.forEach((element) => {
     citation.textContent = element.quote;
     wilderName.textContent = element.name;
     wilderAge.textContent = element.age;
-    if (element.stack === "Html") {
-      iconStack.src = "./assets/icons/html_white.png";
-    } else if (element.stack === "Css") {
-      iconStack.src = "./assets/icons/css_white.png";
-    } else {
-      iconStack.src = "./assets/icons/js_white.png";
-    }
+    checkStack(element, 'white');
     iconGenre.src = element.gender;
     htmlBar.style.width = `${element.levelHtml}%`;
     cssBar.style.width = `${element.levelCss}%`;
     jsBar.style.width = `${element.levelJs}%`;
+    console.log(element.isPerfect);
+
+    card.style.boxShadow = "";
+    cardHeader.style.background = "";
+    cardDetails.style.background = "";
+    cardNoHeader.style.background = "";
+    cardNoHeader.style.border = "";
+    cardHeader.style.boxShadow = "";
+    cardNoHeader.style.boxShadow = "";
+    card.style.color = "#ffffff";
+
     if (element.isPerfect) {
-      cardHeader.style.background =
-        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
-      cardDetails.style.background =
-        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
-      cardNoHeader.style.background =
-        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      const gradientBackground = "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      cardHeader.style.background = gradientBackground;
+      cardDetails.style.background = gradientBackground;
+      cardNoHeader.style.background = gradientBackground;
       cardNoHeader.style.border = "none";
+      cardHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
       cardNoHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
+      card.style.color = "#000000";
+      checkStack(element, 'black');
     } else {
+      card.style.boxShadow = "none";
       if (element.stack === "Html") {
         cardHeader.style.backgroundColor = "#C76048";
         cardDetails.style.backgroundColor = "#C76048";
