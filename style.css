@@ -245,3 +245,32 @@ h1 {
 	flex-direction: column;
 	align-items: center;
 }
+
+@media only screen and (min-width: 700px) {
+	body {
+		height: 100vh;
+	}
+
+	.grid img {
+		width: 8vw;
+		border-radius: 5px;
+	}
+
+	.grid {
+		gap: 5vw;
+	}
+
+	h1 {
+		font-size: 3vw;
+	}
+	.wilder-selection p {
+		font-size: 2vw;
+	}
+	.wilder-card,
+	.wilder-card-active {
+		width: 500px;
+	}
+	.progress-bar {
+		width: 60px;
+	}
+}
