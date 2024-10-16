@@ -5,6 +5,8 @@ const card = document.querySelector(".wilder-card");
 const cardActive = document.querySelector(".wilder-card-active");
 const grid = document.querySelector(".grid");
 const close = document.querySelector("#closing-cross");
+const rightArrow = document.querySelector("#right-arrow");
+const leftArrow = document.querySelector("#left-arrow");
 const wilderName = document.querySelector(".wilder_name");
 const wilderAge = document.querySelector(".wilder_age");
 const iconStack = document.querySelector(".icon-stack");
@@ -264,6 +266,10 @@ person.forEach((element) => {
   grid.appendChild(image);
   image.src = `${element.avatar}`;
 
+  rightArrow.addEventListener("click", function() {
+
+  })
+
   image.addEventListener("click", () => {
     blurBackground.classList.add("blur-background-active");
     blurBackground.classList.remove("blur-background");
@@ -329,3 +335,7 @@ close.addEventListener("click", function () {
   blurBackground.classList.add("blur-background");
   blurBackground.classList.remove("blur-background-active");
 });
+
+rightArrow.addEventListener("click", function() {
+
+})
