@@ -19,6 +19,8 @@ const cardDetails = document.querySelector(".details-card");
 const cardNoHeader = document.querySelector(".card");
 const blurBackground = document.querySelector(".blur-background");
 
+let actualIndex = 0;
+
 const person = [
   {
     id: 1,
@@ -266,11 +268,18 @@ person.forEach((element) => {
   grid.appendChild(image);
   image.src = `${element.avatar}`;
 
-  rightArrow.addEventListener("click", function() {
-
-  })
-
   image.addEventListener("click", () => {
+    actualIndex = element.id - 1;
+    if (actualIndex === 0) {
+      leftArrow.style.visibility = "hidden";
+    } else {
+      leftArrow.style.visibility = "visible";
+    }
+    if (actualIndex === person.length - 1) {
+      rightArrow.style.visibility = "hidden";
+    } else {
+      rightArrow.style.visibility = "visible";
+    }
     blurBackground.classList.add("blur-background-active");
     blurBackground.classList.remove("blur-background");
     card.classList.add("wilder-card-active");
@@ -285,7 +294,6 @@ person.forEach((element) => {
     htmlBar.style.width = `${element.levelHtml}%`;
     cssBar.style.width = `${element.levelCss}%`;
     jsBar.style.width = `${element.levelJs}%`;
-    console.log(element.isPerfect);
 
     card.style.boxShadow = "";
     cardHeader.style.background = "";
@@ -329,6 +337,85 @@ person.forEach((element) => {
   });
 });
 
+
+
+
+
+
+
+
+
+leftArrow.addEventListener("click", function () {
+  rightArrow.style.visibility = "visible";
+  if (actualIndex > 0) {
+    actualIndex--;
+    element = person[actualIndex];
+    cardImage.src = element.img;
+    pDescription.textContent = element.description;
+    citation.textContent = element.quote;
+    wilderName.textContent = element.name;
+    wilderAge.textContent = element.age;
+    checkStack(element, "white");
+    iconGenre.src = element.gender;
+    htmlBar.style.width = `${element.levelHtml}%`;
+    cssBar.style.width = `${element.levelCss}%`;
+    jsBar.style.width = `${element.levelJs}%`;
+
+    card.style.boxShadow = "";
+    cardHeader.style.background = "";
+    cardDetails.style.background = "";
+    cardNoHeader.style.background = "";
+    cardNoHeader.style.border = "";
+    cardHeader.style.boxShadow = "";
+    cardNoHeader.style.boxShadow = "";
+    card.style.color = "#ffffff";
+
+    if (element.isPerfect) {
+      const gradientBackground =
+        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      cardHeader.style.background = gradientBackground;
+      cardDetails.style.background = gradientBackground;
+      cardNoHeader.style.background = gradientBackground;
+      cardNoHeader.style.border = "none";
+      cardHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
+      cardNoHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
+      card.style.color = "#000000";
+      checkStack(element, "black");
+    } else {
+      card.style.boxShadow = "none";
+      if (element.stack === "Html") {
+        cardHeader.style.backgroundColor = "#C76048";
+        cardDetails.style.backgroundColor = "#C76048";
+        cardNoHeader.style.backgroundColor = "#E7916B";
+        cardNoHeader.style.border = "4px solid #C76048";
+      } else if (element.stack === "Css") {
+        cardHeader.style.backgroundColor = "#2958BB";
+        cardDetails.style.backgroundColor = "#2958BB";
+        cardNoHeader.style.backgroundColor = "#759BEE";
+        cardNoHeader.style.border = "4px solid #2958BB";
+      } else {
+        cardHeader.style.backgroundColor = "#D5AB3C";
+        cardDetails.style.backgroundColor = "#D5AB3C";
+        cardNoHeader.style.backgroundColor = "#F7D137";
+        cardNoHeader.style.border = "4px solid #D5AB3C";
+      }
+    }
+    if (actualIndex === 0) {
+        leftArrow.style.visibility = "hidden";
+    }
+  }
+});
+
+
+
+
+
+
+
+
+
+
+
 close.addEventListener("click", function () {
   card.classList.remove("wilder-card-active");
   card.classList.add("wilder-card");
@@ -336,6 +423,66 @@ close.addEventListener("click", function () {
   blurBackground.classList.remove("blur-background-active");
 });
 
-rightArrow.addEventListener("click", function() {
+rightArrow.addEventListener("click", function () {
+  leftArrow.style.visibility = "visible";
+  if (actualIndex < 13) {
+    actualIndex++;
+    console.log(actualIndex);
+    element = person[actualIndex];
+    cardImage.src = element.img;
+    pDescription.textContent = element.description;
+    citation.textContent = element.quote;
+    wilderName.textContent = element.name;
+    wilderAge.textContent = element.age;
+    checkStack(element, "white");
+    iconGenre.src = element.gender;
+    htmlBar.style.width = `${element.levelHtml}%`;
+    cssBar.style.width = `${element.levelCss}%`;
+    jsBar.style.width = `${element.levelJs}%`;
 
-})
+    card.style.boxShadow = "";
+    cardHeader.style.background = "";
+    cardDetails.style.background = "";
+    cardNoHeader.style.background = "";
+    cardNoHeader.style.border = "";
+    cardHeader.style.boxShadow = "";
+    cardNoHeader.style.boxShadow = "";
+    card.style.color = "#ffffff";
+
+    if (element.isPerfect) {
+      const gradientBackground =
+        "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
+      cardHeader.style.background = gradientBackground;
+      cardDetails.style.background = gradientBackground;
+      cardNoHeader.style.background = gradientBackground;
+      cardNoHeader.style.border = "none";
+      cardHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
+      cardNoHeader.style.boxShadow = "0px 0px 15px 10px #FFF8B7";
+      card.style.color = "#000000";
+      checkStack(element, "black");
+    } else {
+      card.style.boxShadow = "none";
+      if (element.stack === "Html") {
+        cardHeader.style.backgroundColor = "#C76048";
+        cardDetails.style.backgroundColor = "#C76048";
+        cardNoHeader.style.backgroundColor = "#E7916B";
+        cardNoHeader.style.border = "4px solid #C76048";
+      } else if (element.stack === "Css") {
+        cardHeader.style.backgroundColor = "#2958BB";
+        cardDetails.style.backgroundColor = "#2958BB";
+        cardNoHeader.style.backgroundColor = "#759BEE";
+        cardNoHeader.style.border = "4px solid #2958BB";
+      } else {
+        cardHeader.style.backgroundColor = "#D5AB3C";
+        cardDetails.style.backgroundColor = "#D5AB3C";
+        cardNoHeader.style.backgroundColor = "#F7D137";
+        cardNoHeader.style.border = "4px solid #D5AB3C";
+      }
+    }
+  }
+  if (actualIndex === person.length - 1) {
+        rightArrow.style.visibility = "hidden";
+    } else {
+      rightArrow.style.visibility = "visible";
+    }
+});
