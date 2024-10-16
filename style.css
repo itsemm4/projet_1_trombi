@@ -27,6 +27,7 @@ main {
 	width: 95%;
 	display: flex;
 	justify-content: space-between;
+  margin-bottom: 10px;
 }
 
 .wilder-selection p {
@@ -252,8 +253,8 @@ h1 {
 	}
 
 	.grid img {
-		width: 8vw;
-		border-radius: 5px;
+		width: 12vw;
+		border-radius: 7px;
 	}
 
 	.grid {
@@ -272,5 +273,12 @@ h1 {
 	}
 	.progress-bar {
 		width: 60px;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+  .grid img {
+		width: 7vw;
+		border-radius: 10px;
 	}
 }
