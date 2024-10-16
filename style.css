@@ -23,6 +23,12 @@ main {
 	align-items: center;
 }
 
+.navigation {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+}
+
 .wilder-selection p {
 	text-align: center;
 	margin-top: 12px;
@@ -46,7 +52,9 @@ h1 {
 	color: white;
 }
 
-#closing-cross {
+#closing-cross,
+#right-arrow,
+#left-arrow {
 	width: 30px;
 	cursor: pointer;
 }
