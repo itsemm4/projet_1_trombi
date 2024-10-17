@@ -262,12 +262,13 @@ h1 {
 }
 
 .footer {
+	display: flex;
+	justify-content: center;
 	margin-top: 5vh;
 	padding: 12px;
 	font-family: var(--main-font);
 	background-color: #ffe605;
 	text-align: center;
-	width: 100vw;
 	bottom: 0;
 }
 
