@@ -32,7 +32,13 @@ const updateCardStyle = (person) => {
 
   resetStyle();
 
-  if (person.isPerfect) {
+  if (person.name === 'Shrek') {
+    elements.cardHeader.style.background = "#559b00";
+    elements.cardDetails.style.background = "#559b00";
+    elements.cardNoHeader.style.background = "#b9ff8a";
+    elements.cardNoHeader.style.border = "4px solid #559b00";
+    elements.card.style.color = "#000000";
+  } else if (person.isPerfect) {
     const gradientBackground = "linear-gradient(45deg, rgba(255,247,171,1) 0%, rgba(211,215,254,1) 25%, rgba(196,245,255,1) 50%, rgba(236,255,212,1) 75%, rgba(248,201,255,1) 100%)";
     elements.cardHeader.style.background = gradientBackground;
     elements.cardDetails.style.background = gradientBackground;
@@ -61,6 +67,8 @@ person.forEach((element, index) => {
   image.src = element.avatar;
 
   image.addEventListener("click", () => {
+    let audio = new Audio("../assets/sounds/marioCoin/marioCoin.mp4");
+    audio.play();
     state.actualIndex = index;
     updateArrowsVisibility(elements, state.actualIndex, person.length);
     elements.blurBackground.classList.add("blur-background-active");
@@ -95,3 +103,91 @@ elements.close.addEventListener("click", () => {
 });
 
 updateArrowsVisibility(elements, state.actualIndex, person.length);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const move = document.getElementById("move");
+const pacmanBody = move.querySelector('.pacman-body');
+let lastX = 0;
+let lastY = 0;
+let currentAngle = 0;
+
+document.body.onpointermove = event => {
+    const { clientX, clientY } = event;
+
+    const dx = clientX - lastX;
+    const dy = clientY - lastY;
+    let targetAngle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+    targetAngle = (targetAngle + 360) % 360;
+
+    let angleDiff = targetAngle - currentAngle;
+    if (angleDiff > 180) {
+        angleDiff -= 360;
+    } else if (angleDiff < -180) {
+        angleDiff += 360;
+    }
+
+    currentAngle += angleDiff * 0.9;
+    
+
+    move.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`
+    }, { 
+        duration: 1000,
+        fill: "forwards",
+        easing: "linear"
+    });
+
+    pacmanBody.animate({
+        transform: `rotate(${currentAngle}deg)`
+    }, { 
+        duration: 100, 
+        fill: "forwards"
+    });
+
+    lastX = clientX;
+    lastY = clientY;
+}
