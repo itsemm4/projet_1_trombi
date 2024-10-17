@@ -84,7 +84,7 @@ h1 {
 	gap: 12px;
 	padding: 24px;
 	color: white;
-	animation: myAnim 2s ease 0s 1 normal forwards;
+	animation: myAnim 1s ease 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
@@ -242,6 +242,14 @@ h1 {
 	flex-wrap: wrap;
 	gap: 5vw;
 	margin-top: 3vw;
+}
+
+.grid img:last-child {
+	opacity: 0;
+}
+
+.grid img:last-child:hover {
+	opacity: 1;
 }
 
 .grid img {

@@ -12,5 +12,5 @@ export const updateStackIcon = (obj, element, color) => {
 
 export const updateArrowsVisibility = (obj, actualIndex, arrayLength) => {
   obj.leftArrow.style.visibility = actualIndex === 0 ? "hidden" : "visible";
-  obj.rightArrow.style.visibility = actualIndex === arrayLength - 1 ? "hidden" : "visible";
+  obj.rightArrow.style.visibility = actualIndex === arrayLength - 2 ? "hidden" : "visible";
 };
