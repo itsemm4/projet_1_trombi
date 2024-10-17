@@ -215,24 +215,27 @@ h1 {
 	background-color: #d9c004;
 }
 
-.blur-background {
-	display: none;
-	position: absolute;
-	z-index: 99;
-	width: 100vw;
-	min-height: 100vh;
+.blur-background,
+.blur-background-active {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	z-index: 99;
+}
+
+.blur-background {
+	display: none;
 }
 
 .blur-background-active {
 	display: block;
-	position: absolute;
-	z-index: 99;
-	width: 100vw;
-	min-height: 100vh;
-	background-color: rgba(0, 0, 0, 0.6);
-	backdrop-filter: blur(10px);
 }
 
 .grid {
