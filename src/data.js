@@ -215,7 +215,7 @@ const person = [
     id: 14,
     name: "Arthur Heurtebise",
     age: 32,
-    img: "./assets/images/Arthur.jpg",
+    img: "./assets/images/arthur.png",
     avatar: "./assets/avatar/arthur.jpg",
     stack: "Js",
     gender: "./assets/icons/male.png",
@@ -227,18 +227,17 @@ const person = [
     levelCss: 100,
     levelJs: 100,
     isPerfect: true,
-  },{
+  },
+  {
     id: 15,
     name: "Shrek",
     age: 32,
-    img: "https://ih1.redbubble.net/image.2517271689.2840/raf,360x360,075,t,fafafa:ca443f4786.jpg",
+    img: "./assets/images/shrek.png",
     avatar: "./assets/avatar/marioBox.png",
     stack: "Js",
     gender: "./assets/icons/male.png",
-    description:
-      "Shrek",
-    quote:
-      "Shrek",
+    description: "Shrek",
+    quote: "Shrek",
     levelHtml: 100,
     levelCss: 100,
     levelJs: 100,
@@ -246,4 +245,4 @@ const person = [
   },
 ];
 
-export default person
+export default person;
