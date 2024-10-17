@@ -1,7 +1,7 @@
 const elements = {
   cardImage: document.getElementById("card-image"),
   pDescription: document.getElementById("p-description"),
-  citation: document.querySelector("blockquote"),
+  citation: document.querySelector("i"),
   card: document.querySelector(".wilder-card"),
   grid: document.querySelector(".grid"),
   close: document.querySelector("#closing-cross"),
