@@ -17,6 +17,7 @@
 
 html {
   background-color: black;
+  cursor: url("./assets/icons/game.png"), auto;
 }
 
 body {
@@ -248,6 +249,7 @@ h1 {
   background-color: var(--pacman-color);
   text-align: center;
   bottom: 0;
+  cursor: url("./assets/icons/game.png"), auto;
 }
 
 #closing-cross,

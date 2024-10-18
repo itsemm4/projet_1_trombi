@@ -129,24 +129,6 @@ updateArrowsVisibility(elements, state.actualIndex, person.length);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const move = document.getElementById("move");
 const pacmanBody = move.querySelector('.pacman-body');
 let lastX = 0;
