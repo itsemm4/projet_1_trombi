@@ -267,9 +267,7 @@ h1 {
 }
 
 .pacman-body {
-  width: 30px;
-  height: 30px;
-  transform-origin: center;
+  display: none;
 }
 
 .pacman {
@@ -347,6 +345,13 @@ h1 {
   .progress-bar {
     width: 60px;
   }
+
+  .pacman-body {
+  width: 30px;
+  height: 30px;
+  transform-origin: center;
+  display: block;
+}
 }
 
 @media only screen and (min-width: 1000px) {
